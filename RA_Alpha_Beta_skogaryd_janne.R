@@ -15,20 +15,20 @@ library("reshape2")
 
 
 #Set working directory
-setwd("~/R/Skogaryd/Taxanomic/PERMANOVA/Janne")
+setwd()
 
 #Import data in xlsx format. 
-otu_mat <- read_excel("~/R/Skogaryd/Taxanomic/PERMANOVA/Janne/otu_skog_2017.xlsx")
+otu_mat <- read_excel)
 row.names(otu_mat) <- otu_mat$otu
 otu_mat <- otu_mat %>% select (-otu)
 otu_mat
 
-tax_mat <- read_excel("~/R/Skogaryd/Taxanomic/PERMANOVA/Janne/taxa_skogaryds.xlsx")
+tax_mat <- read_excel()
 row.names(tax_mat) <- tax_mat$otu
 tax_mat <- tax_mat %>% select (-otu) 
 tax_mat
 
-samples_df<- read_excel("~/R/Skogaryd/Taxanomic/PERMANOVA/Janne/Samples_df_2017.xlsx")
+samples_df<- read_excel()
 samples_df
 row.names(samples_df) <- samples_df$Sample_ID_plot
 samples_df
@@ -112,11 +112,6 @@ guides(fill=guide_legend(title="Functional group"))
 
 prop
 
-library(ggpubr)
-ggarrange(prop,lollipop, common.legend = FALSE,
-          ncol = 1, nrow = 2)
-
-
 #save plot
 ggsave("RA_ecotype.tiff", units="in", width=10, height=8, dpi=300, compression = 'lzw')
 
@@ -127,11 +122,11 @@ require(vegan)
 library(dplyr)
 library(rstatix)
 
-myckel_sp <- read.csv("~/R/Skogaryd/Taxanomic/PERMANOVA/Janne/myckelmossa_spp_2017_functional_summed.csv")
+myckel_sp <- read.csv()
 head(myckel_sp)
 
 
-myckel_env <- read.csv("~/R/Skogaryd/Taxanomic/PERMANOVA/Janne/myckelmossa_env_2017.csv")
+myckel_env <- read.csv()
 head(myckel_env)
 
 
@@ -185,4 +180,4 @@ summary
 
 #Save the details
 taxa_simper_output <- capture.output(print(summary))
-writeLines(taxa_simper_output, con = file("taxa__simper_summary_ecotype_Janne.txt"))
+writeLines(taxa_simper_output, con = file())
